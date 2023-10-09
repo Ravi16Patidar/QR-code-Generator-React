@@ -4,9 +4,7 @@ import QrCode from './Components/QrCode';
 function App() {
   return (
     <>
-    {/* <QrCode/> */}
     <QrCode/>
-
     </>
       );
 }

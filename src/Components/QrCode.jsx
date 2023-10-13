@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-// import QRcode from 'react-qr-code'
 import QRcode from 'qrcode.react'
 import CancelIcon from '@mui/icons-material/Cancel';
 export default function QrCode2() {
@@ -9,15 +8,9 @@ export default function QrCode2() {
     const [qrValue,setQrValue]=useState("");
     const [url,setUrl]=useState("");
 
-    // download function 
     const downloadQR = () => {
     
-      // let downloadLink = document.createElement("a");
-      // downloadLink.href = pngUrl;
-      // downloadLink.download = "myqr.png";
-      // document.body.appendChild(downloadLink);
-      // downloadLink.click();
-      // document.body.removeChild(downloadLink);
+
   };
 
     function handleInput(e)

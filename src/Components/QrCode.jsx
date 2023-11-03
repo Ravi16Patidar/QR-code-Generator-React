@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import { Snackbar, Button } from "@mui/material";
-import Alert from '@mui/material/Alert';
+import Alert from "@mui/material/Alert";
 
 import QRcode from "qrcode.react";
 import CancelIcon from "@mui/icons-material/Cancel";
@@ -55,20 +55,24 @@ export default function QrCode2() {
         ></TextField>
         <CancelIcon onClick={clearInput} className="clearInput" />
       </div>
-      <div style={{ display: "flex", gap: "120px", margin: "15px 0" }}>
+      <div style={{ display: "flex", gap: "120px", margin: "15px 0",flexWrap:"wrap",justifyContent:"center" }}>
         <Button variant="contained" sx={{ width: "200px" }} onClick={copyUrl}>
           Copy URL
         </Button>
         <Button variant="contained" onClick={qrCode} sx={{ width: "200px" }}>
           GENRRATE QR CODE
         </Button>
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleSnackbarClose}>
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={handleSnackbarClose}
+        >
           <Alert
             onClose={handleSnackbarClose}
             severity="success"
             sx={{ width: "100%" }}
           >
-            This is a success message!
+            URL Copied Successfully!
           </Alert>
         </Snackbar>
       </div>
